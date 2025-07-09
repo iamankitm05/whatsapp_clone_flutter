@@ -1,6 +1,7 @@
 enum AppRoutes {
   splashScreen('splash', '/splash'),
-  home('home', '/');
+  homeScreen('home', '/'),
+  chatScreen('chat', '/chat');
 
   final String name;
   final String path;

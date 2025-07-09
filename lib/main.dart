@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/routes/app_router.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp.router(
+      title: 'WhatsApp Clone',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      themeMode: ThemeMode.light,
+      routerConfig: AppRouter.instance.router,
     );
   }
 }
